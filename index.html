@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyTube</title>
 
+  <!-- Google Font, to look closer to YouTube's real font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <!-- This links our CSS file to this HTML page -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,31 +17,103 @@
   <!-- ===== HEADER: logo, search bar, and icons ===== -->
   <header class="header">
     <div class="header-left">
-      <span class="hamburger">&#9776;</span>
-      <span class="logo">MyTube</span>
+      <button class="icon-btn hamburger" title="Menu" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 28 20">
+          <path d="M27.4 3.1c-.3-1.2-1.3-2.2-2.5-2.5C22.7 0 14 0 14 0S5.3 0 3.1.6C1.9.9.9 1.9.6 3.1 0 5.3 0 10 0 10s0 4.7.6 6.9c.3 1.2 1.3 2.2 2.5 2.5C5.3 20 14 20 14 20s8.7 0 10.9-.6c1.2-.3 2.2-1.3 2.5-2.5.6-2.2.6-6.9.6-6.9s0-4.7-.6-6.9z" fill="#ff0000"/>
+          <path d="M11 14.5v-9L18.5 10 11 14.5z" fill="#fff"/>
+        </svg>
+        <span>MyTube</span>
+      </a>
     </div>
 
     <div class="header-middle">
-      <input type="text" class="search-bar" placeholder="Search">
-      <button class="search-btn">&#128269;</button>
+      <div class="search-wrap">
+        <input type="text" class="search-bar" placeholder="Search">
+        <button class="search-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+      <button class="icon-btn mic-btn" title="Search with voice" aria-label="Search with voice">
+        <svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 003-3V6a3 3 0 00-6 0v6a3 3 0 003 3z"/><path d="M19 11a7 7 0 01-14 0M12 18v3"/></svg>
+      </button>
     </div>
 
     <div class="header-right">
-      <span class="icon">&#128100;</span>
+      <button class="icon-btn" title="Create">
+        <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      </button>
+      <button class="icon-btn" title="Notifications">
+        <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>
+      </button>
+      <span class="avatar">Y</span>
     </div>
   </header>
 
   <!-- ===== BODY: sidebar on the left, main content on the right ===== -->
   <div class="main-container">
 
-    <!-- ===== SIDEBAR: list of navigation links ===== -->
+    <!-- ===== SIDEBAR: sections of navigation links ===== -->
     <aside class="sidebar">
-      <ul>
-        <li class="active">&#127968; Home</li>
-        <li>&#128293; Trending</li>
-        <li>&#128250; Subscriptions</li>
-        <li>&#128194; Library</li>
-        <li>&#8986; History</li>
+
+      <ul class="sidebar-section">
+        <li class="active">
+          <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+          <span>Home</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M12 7l3 3-3 3" fill="currentColor" stroke="none"/></svg>
+          <span>Shorts</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M21 7l-8 5 8 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          <span>Subscriptions</span>
+        </li>
+      </ul>
+
+      <hr class="sidebar-divider">
+
+      <ul class="sidebar-section">
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h11"/></svg>
+          <span>Library</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <span>History</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Your videos</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 10-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg>
+          <span>Liked videos</span>
+        </li>
+      </ul>
+
+      <hr class="sidebar-divider">
+
+      <p class="sidebar-heading">Explore</p>
+      <ul class="sidebar-section">
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          <span>Trending</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          <span>Music</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="6"/><circle cx="8" cy="12" r="1.5" fill="currentColor"/><circle cx="16" cy="12" r="1.5" fill="currentColor"/></svg>
+          <span>Gaming</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M7 4v4"/></svg>
+          <span>News</span>
+        </li>
       </ul>
     </aside>
 
@@ -47,81 +123,236 @@
       <!-- Row of filter buttons, like on real YouTube -->
       <div class="chips">
         <span class="chip active">All</span>
+        <span class="chip">Sports</span>
+        <span class="chip">Study</span>
+        <span class="chip">Work</span>
+        <span class="chip">Coding</span>
+        <span class="chip">Fitness</span>
         <span class="chip">Music</span>
         <span class="chip">Gaming</span>
-        <span class="chip">News</span>
-        <span class="chip">Coding</span>
-        <span class="chip">Movies</span>
+        <span class="chip">Cooking</span>
+        <span class="chip">Travel</span>
       </div>
 
       <!-- Grid of video cards -->
       <div class="video-grid">
 
-        <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
-          <div class="video-info">
-            <div class="channel-icon"></div>
-            <div class="video-text">
-              <p class="video-title">Learn HTML in 10 Minutes</p>
-              <p class="video-meta">Code Academy &middot; 1.2M views &middot; 2 days ago</p>
-            </div>
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">15:42</span>
           </div>
-        </div>
+          <div class="video-info">
+            <div class="channel-icon">S</div>
+            <div class="video-text">
+              <p class="video-title">Top 10 Football Skills of the Season</p>
+              <p class="channel-name">Sports Central <svg class="verified" viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.1-.6 1 3 2.9 1.4-.6 3.1L23 14l-2.2 2.4.6 3.1-3 1-1.4 2.9-3.1-.6L12 25l-2.4-2.1-3.1.6-1-3-2.9-1.4.6-3.1L1 14l2.2-2.4-.6-3.1 3-1 1.4-2.9 3.1.6z"/><path d="M9 14l2 2 4-4" stroke="#fff" fill="none"/></svg></p>
+              <p class="video-meta">4.8M views &middot; 3 days ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
 
-        <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
-          <div class="video-info">
-            <div class="channel-icon"></div>
-            <div class="video-text">
-              <p class="video-title">CSS Grid vs Flexbox</p>
-              <p class="video-meta">Web Dev Simplified &middot; 850K views &middot; 1 week ago</p>
-            </div>
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">44:10</span>
+            <span class="live-badge">LIVE</span>
           </div>
-        </div>
+          <div class="video-info">
+            <div class="channel-icon">B</div>
+            <div class="video-text">
+              <p class="video-title">Basketball Finals: Live Match Highlights</p>
+              <p class="channel-name">Ball Arena <svg class="verified" viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.1-.6 1 3 2.9 1.4-.6 3.1L23 14l-2.2 2.4.6 3.1-3 1-1.4 2.9-3.1-.6L12 25l-2.4-2.1-3.1.6-1-3-2.9-1.4.6-3.1L1 14l2.2-2.4-.6-3.1 3-1 1.4-2.9 3.1.6z"/><path d="M9 14l2 2 4-4" stroke="#fff" fill="none"/></svg></p>
+              <p class="video-meta">2.9M views &middot; Streaming now</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
 
-        <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
-          <div class="video-info">
-            <div class="channel-icon"></div>
-            <div class="video-text">
-              <p class="video-title">Relaxing Lofi Beats</p>
-              <p class="video-meta">Chill Music &middot; 3.4M views &middot; 3 days ago</p>
-            </div>
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">18:35</span>
           </div>
-        </div>
+          <div class="video-info">
+            <div class="channel-icon">S</div>
+            <div class="video-text">
+              <p class="video-title">How to Study Effectively for Exams</p>
+              <p class="channel-name">Study Smart</p>
+              <p class="video-meta">1.7M views &middot; 4 days ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
 
-        <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
-          <div class="video-info">
-            <div class="channel-icon"></div>
-            <div class="video-text">
-              <p class="video-title">Building My First Website</p>
-              <p class="video-meta">Beginner Coder &middot; 400K views &middot; 5 hours ago</p>
-            </div>
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">55:20</span>
           </div>
-        </div>
+          <div class="video-info">
+            <div class="channel-icon">M</div>
+            <div class="video-text">
+              <p class="video-title">Full Calculus Course for Beginners</p>
+              <p class="channel-name">MathHub <svg class="verified" viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.1-.6 1 3 2.9 1.4-.6 3.1L23 14l-2.2 2.4.6 3.1-3 1-1.4 2.9-3.1-.6L12 25l-2.4-2.1-3.1.6-1-3-2.9-1.4.6-3.1L1 14l2.2-2.4-.6-3.1 3-1 1.4-2.9 3.1.6z"/><path d="M9 14l2 2 4-4" stroke="#fff" fill="none"/></svg></p>
+              <p class="video-meta">3.2M views &middot; 2 weeks ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
 
-        <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
-          <div class="video-info">
-            <div class="channel-icon"></div>
-            <div class="video-text">
-              <p class="video-title">Top 10 Travel Destinations</p>
-              <p class="video-meta">Explore World &middot; 2.1M views &middot; 1 month ago</p>
-            </div>
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">11:05</span>
           </div>
-        </div>
+          <div class="video-info">
+            <div class="channel-icon">C</div>
+            <div class="video-text">
+              <p class="video-title">5 Productivity Tips for Remote Work</p>
+              <p class="channel-name">Career Boost</p>
+              <p class="video-meta">980K views &middot; 6 days ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
 
-        <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
-          <div class="video-info">
-            <div class="channel-icon"></div>
-            <div class="video-text">
-              <p class="video-title">Cooking Pasta Like a Pro</p>
-              <p class="video-meta">Kitchen Tips &middot; 900K views &middot; 6 days ago</p>
-            </div>
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">9:40</span>
           </div>
-        </div>
+          <div class="video-info">
+            <div class="channel-icon">B</div>
+            <div class="video-text">
+              <p class="video-title">How to Write a Winning Resume in 2026</p>
+              <p class="channel-name">Business Insights <svg class="verified" viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.1-.6 1 3 2.9 1.4-.6 3.1L23 14l-2.2 2.4.6 3.1-3 1-1.4 2.9-3.1-.6L12 25l-2.4-2.1-3.1.6-1-3-2.9-1.4.6-3.1L1 14l2.2-2.4-.6-3.1 3-1 1.4-2.9 3.1.6z"/><path d="M9 14l2 2 4-4" stroke="#fff" fill="none"/></svg></p>
+              <p class="video-meta">1.4M views &middot; 1 week ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">7:12</span>
+          </div>
+          <div class="video-info">
+            <div class="channel-icon">W</div>
+            <div class="video-text">
+              <p class="video-title">CSS Grid vs Flexbox: When to Use Each</p>
+              <p class="channel-name">Web Dev Simplified</p>
+              <p class="video-meta">850K views &middot; 1 week ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">20:15</span>
+          </div>
+          <div class="video-info">
+            <div class="channel-icon">F</div>
+            <div class="video-text">
+              <p class="video-title">Full Body Home Workout, No Equipment</p>
+              <p class="channel-name">FitLife</p>
+              <p class="video-meta">2.3M views &middot; 5 days ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">58:03</span>
+          </div>
+          <div class="video-info">
+            <div class="channel-icon">C</div>
+            <div class="video-text">
+              <p class="video-title">Relaxing Lofi Beats to Study/Code To</p>
+              <p class="channel-name">Chill Music <svg class="verified" viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.1-.6 1 3 2.9 1.4-.6 3.1L23 14l-2.2 2.4.6 3.1-3 1-1.4 2.9-3.1-.6L12 25l-2.4-2.1-3.1.6-1-3-2.9-1.4.6-3.1L1 14l2.2-2.4-.6-3.1 3-1 1.4-2.9 3.1.6z"/><path d="M9 14l2 2 4-4" stroke="#fff" fill="none"/></svg></p>
+              <p class="video-meta">3.4M views &middot; 2 days ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">9:18</span>
+          </div>
+          <div class="video-info">
+            <div class="channel-icon">K</div>
+            <div class="video-text">
+              <p class="video-title">Cooking Pasta Like a Pro Chef</p>
+              <p class="channel-name">Kitchen Tips</p>
+              <p class="video-meta">900K views &middot; 6 days ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">21:47</span>
+          </div>
+          <div class="video-info">
+            <div class="channel-icon">G</div>
+            <div class="video-text">
+              <p class="video-title">Speedrunning My Favorite Game</p>
+              <p class="channel-name">GameZone <svg class="verified" viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.1-.6 1 3 2.9 1.4-.6 3.1L23 14l-2.2 2.4.6 3.1-3 1-1.4 2.9-3.1-.6L12 25l-2.4-2.1-3.1.6-1-3-2.9-1.4.6-3.1L1 14l2.2-2.4-.6-3.1 3-1 1.4-2.9 3.1.6z"/><path d="M9 14l2 2 4-4" stroke="#fff" fill="none"/></svg></p>
+              <p class="video-meta">5.6M views &middot; 4 days ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="thumbnail">
+            <svg class="play-hint" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="duration">12:30</span>
+          </div>
+          <div class="video-info">
+            <div class="channel-icon">E</div>
+            <div class="video-text">
+              <p class="video-title">Top 10 Travel Destinations for 2026</p>
+              <p class="channel-name">Explore World <svg class="verified" viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.1-.6 1 3 2.9 1.4-.6 3.1L23 14l-2.2 2.4.6 3.1-3 1-1.4 2.9-3.1-.6L12 25l-2.4-2.1-3.1.6-1-3-2.9-1.4.6-3.1L1 14l2.2-2.4-.6-3.1 3-1 1.4-2.9 3.1.6z"/><path d="M9 14l2 2 4-4" stroke="#fff" fill="none"/></svg></p>
+              <p class="video-meta">2.1M views &middot; 1 month ago</p>
+            </div>
+            <button class="menu-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </button>
+          </div>
+        </article>
 
       </div>
     </main>
