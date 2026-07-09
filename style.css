@@ -1,0 +1,205 @@
+/* ============================================
+   1. RESET & BASE STYLES
+   Remove default browser spacing and set a base font.
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding/border no longer add to element width */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #0f0f0f;
+}
+
+/* ============================================
+   2. HEADER
+   A flex row split into 3 sections: left, middle, right.
+   ============================================ */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hamburger {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000; /* YouTube-style red */
+}
+
+.header-middle {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+}
+
+.search-btn {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.header-right .icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ============================================
+   3. MAIN LAYOUT
+   Sidebar + content sit side by side using flex.
+   ============================================ */
+.main-container {
+  display: flex;
+}
+
+/* ============================================
+   4. SIDEBAR
+   A fixed-width column of navigation links.
+   ============================================ */
+.sidebar {
+  width: 200px;
+  padding: 20px 0;
+  background-color: #fff;
+  border-right: 1px solid #e5e5e5;
+  min-height: calc(100vh - 57px);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.sidebar li:hover {
+  background-color: #f2f2f2;
+}
+
+.sidebar li.active {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* ============================================
+   5. CONTENT AREA
+   Holds the filter chips and the video grid.
+   ============================================ */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Filter chips row */
+.chips {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 6px 14px;
+  background-color: #f2f2f2;
+  border-radius: 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chip.active {
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+/* ============================================
+   6. VIDEO GRID
+   CSS Grid auto-fills as many columns as fit.
+   ============================================ */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #ddd;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.video-info {
+  display: flex;
+  gap: 10px;
+}
+
+.channel-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.video-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.video-meta {
+  font-size: 13px;
+  color: #606060;
+}
+
+/* ============================================
+   7. RESPONSIVE: hide sidebar on small screens
+   ============================================ */
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+}

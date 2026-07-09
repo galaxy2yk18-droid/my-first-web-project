@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyTube</title>
+
+  <!-- This links our CSS file to this HTML page -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER: logo, search bar, and icons ===== -->
+  <header class="header">
+    <div class="header-left">
+      <span class="hamburger">&#9776;</span>
+      <span class="logo">MyTube</span>
+    </div>
+
+    <div class="header-middle">
+      <input type="text" class="search-bar" placeholder="Search">
+      <button class="search-btn">&#128269;</button>
+    </div>
+
+    <div class="header-right">
+      <span class="icon">&#128100;</span>
+    </div>
+  </header>
+
+  <!-- ===== BODY: sidebar on the left, main content on the right ===== -->
+  <div class="main-container">
+
+    <!-- ===== SIDEBAR: list of navigation links ===== -->
+    <aside class="sidebar">
+      <ul>
+        <li class="active">&#127968; Home</li>
+        <li>&#128293; Trending</li>
+        <li>&#128250; Subscriptions</li>
+        <li>&#128194; Library</li>
+        <li>&#8986; History</li>
+      </ul>
+    </aside>
+
+    <!-- ===== CONTENT: category filter chips + video grid ===== -->
+    <main class="content">
+
+      <!-- Row of filter buttons, like on real YouTube -->
+      <div class="chips">
+        <span class="chip active">All</span>
+        <span class="chip">Music</span>
+        <span class="chip">Gaming</span>
+        <span class="chip">News</span>
+        <span class="chip">Coding</span>
+        <span class="chip">Movies</span>
+      </div>
+
+      <!-- Grid of video cards -->
+      <div class="video-grid">
+
+        <div class="video-card">
+          <div class="thumbnail">Thumbnail</div>
+          <div class="video-info">
+            <div class="channel-icon"></div>
+            <div class="video-text">
+              <p class="video-title">Learn HTML in 10 Minutes</p>
+              <p class="video-meta">Code Academy &middot; 1.2M views &middot; 2 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail">Thumbnail</div>
+          <div class="video-info">
+            <div class="channel-icon"></div>
+            <div class="video-text">
+              <p class="video-title">CSS Grid vs Flexbox</p>
+              <p class="video-meta">Web Dev Simplified &middot; 850K views &middot; 1 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail">Thumbnail</div>
+          <div class="video-info">
+            <div class="channel-icon"></div>
+            <div class="video-text">
+              <p class="video-title">Relaxing Lofi Beats</p>
+              <p class="video-meta">Chill Music &middot; 3.4M views &middot; 3 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail">Thumbnail</div>
+          <div class="video-info">
+            <div class="channel-icon"></div>
+            <div class="video-text">
+              <p class="video-title">Building My First Website</p>
+              <p class="video-meta">Beginner Coder &middot; 400K views &middot; 5 hours ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail">Thumbnail</div>
+          <div class="video-info">
+            <div class="channel-icon"></div>
+            <div class="video-text">
+              <p class="video-title">Top 10 Travel Destinations</p>
+              <p class="video-meta">Explore World &middot; 2.1M views &middot; 1 month ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail">Thumbnail</div>
+          <div class="video-info">
+            <div class="channel-icon"></div>
+            <div class="video-text">
+              <p class="video-title">Cooking Pasta Like a Pro</p>
+              <p class="video-meta">Kitchen Tips &middot; 900K views &middot; 6 days ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
