@@ -5,7 +5,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* padding/border no longer add to element width */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
@@ -50,7 +51,6 @@ svg {
    ============================================ */
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 8px 16px;
   background-color: #fff;
@@ -240,11 +240,10 @@ svg {
   min-width: 0;
 }
 
-/* Filter chips row */
-.chips {
+.categories {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   flex-wrap: wrap;
   position: sticky;
   top: 57px;
@@ -268,15 +267,12 @@ svg {
   background-color: #e5e5e5;
 }
 
-.chip.active {
-  background-color: #0f0f0f;
-  color: #fff;
+.categories button:hover,
+.categories .active {
+  background: white;
+  color: black;
 }
 
-/* ============================================
-   6. VIDEO GRID
-   CSS Grid auto-fills as many columns as fit.
-   ============================================ */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -284,7 +280,11 @@ svg {
 }
 
 .video-card {
-  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
 }
 
 .video-card:hover .video-title {
@@ -301,7 +301,6 @@ svg {
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-bottom: 12px;
   overflow: hidden;
@@ -360,9 +359,8 @@ svg {
 }
 
 .channel-icon {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background-color: #606060;
   color: #fff;
@@ -407,7 +405,8 @@ svg {
 
 .video-meta {
   font-size: 13px;
-  color: #606060;
+  color: #aaaaaa;
+  line-height: 1.5;
 }
 
 .menu-btn {
@@ -465,7 +464,7 @@ svg {
     display: none;
   }
 
-  .header-left {
+    .header-left {
     min-width: auto;
   }
 
