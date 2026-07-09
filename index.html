@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyTube</title>
 
+  <!-- Google Font, to look closer to YouTube's real font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <!-- This links our CSS file to this HTML page -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,7 +18,10 @@
   <header class="header">
     <div class="header-left">
       <span class="hamburger">&#9776;</span>
-      <span class="logo">MyTube</span>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9658;</span>
+        MyTube
+      </a>
     </div>
 
     <div class="header-middle">
@@ -23,7 +30,9 @@
     </div>
 
     <div class="header-right">
-      <span class="icon">&#128100;</span>
+      <span class="icon" title="Upload">&#128248;</span>
+      <span class="icon" title="Notifications">&#128276;</span>
+      <span class="avatar">Y</span>
     </div>
   </header>
 
@@ -38,6 +47,7 @@
         <li>&#128250; Subscriptions</li>
         <li>&#128194; Library</li>
         <li>&#8986; History</li>
+        <li>&#128077; Liked Videos</li>
       </ul>
     </aside>
 
@@ -58,7 +68,7 @@
       <div class="video-grid">
 
         <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
+          <div class="thumbnail">Thumbnail<span class="duration">10:24</span></div>
           <div class="video-info">
             <div class="channel-icon"></div>
             <div class="video-text">
@@ -69,7 +79,7 @@
         </div>
 
         <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
+          <div class="thumbnail">Thumbnail<span class="duration">7:12</span></div>
           <div class="video-info">
             <div class="channel-icon"></div>
             <div class="video-text">
@@ -80,7 +90,7 @@
         </div>
 
         <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
+          <div class="thumbnail">Thumbnail<span class="duration">58:03</span></div>
           <div class="video-info">
             <div class="channel-icon"></div>
             <div class="video-text">
@@ -91,7 +101,7 @@
         </div>
 
         <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
+          <div class="thumbnail">Thumbnail<span class="duration">3:45</span></div>
           <div class="video-info">
             <div class="channel-icon"></div>
             <div class="video-text">
@@ -102,7 +112,7 @@
         </div>
 
         <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
+          <div class="thumbnail">Thumbnail<span class="duration">12:30</span></div>
           <div class="video-info">
             <div class="channel-icon"></div>
             <div class="video-text">
@@ -113,7 +123,7 @@
         </div>
 
         <div class="video-card">
-          <div class="thumbnail">Thumbnail</div>
+          <div class="thumbnail">Thumbnail<span class="duration">9:18</span></div>
           <div class="video-info">
             <div class="channel-icon"></div>
             <div class="video-text">
